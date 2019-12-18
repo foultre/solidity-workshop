@@ -141,3 +141,11 @@ contract ERC20 is IERC20 {
         emit Approval(owner, spender, value);
     }
 }
+
+/**
+ * let's create and mint 1 billion tokens named "SuperEuro"
+ */
+contract SuperEuro is ERC20{
+    constructor () public ERC20("SuperEuro","SEUR",2,10**9) {
+    }
+}
